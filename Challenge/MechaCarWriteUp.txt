@@ -1,0 +1,50 @@
+** Which variables/coefficient provided a non-random amount of variance to the mpg values in the dataset?
+Based on the results of the multiple linear regression model vehicle.length and ground.clearance (and interecept) 
+provided non-random amounts of variance to the mpg values as their probabiliy, Pr(>|t|), values were far below the 
+significance level of 0.05 with values of 3.05e-12 and 2.13e-08 (and 1.87e-08), respectively.
+
+
+** Is the slope of the linear model considered to be zero? Why or why not?
+The slope of the linear model is not considered to be zero becasue the overall p-value of the model was 2.277e-11, 
+which is far below the 0.05 significance level, thereby providing enough evidence to reject the null hypothesis that 
+the slope is zero.
+
+
+** Does the linear model predict mpg of MechaCar prototypes effectively? Why or why not?
+The Multiple R-squared value is 0.7032, indicating that the model can predict the mpg of MechaCar prototypes around 70% of the time based on the independent variables 
+we have included in the model. Although 70% is a pretty good score to predict miles per gallon, there were only two significant variables found in the model. This may 
+indicate that the model is overfitting the data. Noneteeless, in terms of predicting miles per gallon, a variable that has less to do with safety, this is a good start 
+and after introducing additional variables to improve the prediction model's performance and alleviate possible overfitting, this can prove to be an effective model.
+
+
+** Summary Statistics for Suspension Coil Data
+Based on the summary statistics for the suspension coil data, the pounds per inch data had a mean of 1,499, median of 1,500, variance of 62.3, and standard deviation of 
+7.9. Since the variance did not exceed the variance limit of 100 pounds per inch, the data meets the design specifications. Furthermore, since the median and mean are 
+similar (only off by 1), this indicates that the data is likely to be symmetrical. Furthermore, the standard deviation is small compared to the average, so most of the 
+data points are concentrated near the average. Thus, the data is likely to be normally distributed with no skew.
+
+
+Based on the one-sample t-test for pounds per inch of suspension coil data, the null hypothesis could not be rejected since there was a p-value of 0.06 which exceeds the 
+significance level of 0.05. Thus, the suspension coil’s pound-per-inch data is statistically similar to the population data.
+
+
+** Think critically about what metrics you would think would be of interest to a consumer (cost, fuel efficiency, color options, etc.).
+When designing a study to compare the MechaCar to other vehicle competition, the metrics that should be looked at include both numerical and categorical data. 
+Numerical data could include cost, horsepower, and fuel efficiency measured in miles per gallon. Fuel efficency can even be further expanded to include city versus highway 
+miles per gallon. In addition to numerical data, categorical data will also be important to compare. Dichotamous data can included such as the availability of certain 
+features like cruise control, rear view cameras, GPS systems, etc. Nominal data such as engine type, transmission type, color, and drivetrain will also be important to 
+include in the data set. Lastly, ordinal data can be included if ratings for the vehicles are available from already existing models or results from trial testing.
+
+
+** Determine what question we would ask, what the null and alternative hypothesis would be to answer that question, and what statistical test could be used to test 
+this hypothesis.
+The question that should be asked is can two competing vehicles ratings be predicted based on the same metrics as described before? The null hypothesis would be that the 
+metrics do not impact future ratings and the alternative hypothesis would be that the metrics do impact ratings. A paired two sample t-test can be designed to determine if 
+the ratings data is statistically significant, then correlation matrices can be made for each vehicle, and finally mutliple linear regression models can be built to predict 
+the average ratings of a vehicle based on specific design metrics. Then the predicted ratings can be compared between the two vehicles.
+
+
+** Knowing what test should be used, what data should be collected? Hint: Look at the cheat sheetPreview the document for required variables.
+Although ratings data is usually considered ordinal categorical data, we will use it as numerical data so that it can be put through the linear regression model. 
+Numerical ratings data should be collected so that it can be used as the dependent variable, and other numerical data as discussed previously such as cost, horsepower, 
+and the different variations of fuel efficiency should be collected to be used as the independent variables.
